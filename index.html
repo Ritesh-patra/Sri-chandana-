@@ -8,148 +8,201 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
+<style>
+    /* Scrollbar ko hide karne ke liye */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, aur Opera ke liye */
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        /* IE aur Edge ke liye */
+        scrollbar-width: none;
+        /* Firefox ke liye */
+    }
+</style>
 
 <body>
-    <header class="w-full h-screen bg-red-600">
-        <nav>
-            <div class="flex items-center justify-between p-5 h-20 bg-white ">
-                <div class="flex items-center">
-                    <img class="w-28" src="images/logo.png" alt="">
-                </div>
-                <div class="hidden md:flex sm:flex-initial items-center justify-between">
-                    <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Home</a>
-                    <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">About</a>
-                    <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Services</a>
-                    <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Contact</a>
-                </div>
-
-                <div class="flex items-center">
-                    <button
-                        class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-                        Sign in
-                    </button>
-                </div>
+    <nav>
+        <div class="flex items-center justify-between p-5 h-20 bg-white ">
+            <div class="flex items-center">
+                <img class="w-28" src="images/logo.png" alt="">
             </div>
-        </nav>
+            <div class="hidden md:flex sm:flex-initial items-center justify-between">
+                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Home</a>
+                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">About</a>
+                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Services</a>
+                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Contact</a>
+            </div>
+
+            <div class="flex items-center">
+                <button
+                    class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header style="background-image: url(images/hero.jpg);"
+        class="w-full flex items-center relative justify-between h-screen bg-center bg-cover">
+        <div class="left w-1/2"></div>
+        <div class="right w-1/2 h-full flex flex-col justify-center items-start p-10 text-white">
+            <h1 class="text-5xl font-bold mb-4">Welcome to <br> Shree Chandana Collection</h1>
+            <p class="text-lg mb-6">Discover the Elegance of Handcrafted Sambalpuri Sarees</p>
+            <p class="text-base mb-8">Experience the rich heritage of Odisha with our exclusive collection of
+                traditional and contemporary designs. Perfect for every occasion, our sarees are woven with love and
+                precision.</p>
+            <a href="#collection"
+                class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Explore
+                Collection</a>
+        </div>
     </header>
 
-    <div class="bg-white shadow">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-2xl font-bold text-gray-800">Sri Annapurna Textiles</h1>
-        </div>
-    </div>
+
 
     <!-- Categories Grid -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Women's Wear -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style="background-image: url(https://i.pinimg.com/474x/b2/56/db/b256db0c9cc8f11d6e60f40a82e6eded.jpg);"
-                    class="aspect-[4/5] bg-[#E8C4A9] flex items-center justify-center bg-cover bg-center">
-                    <div class="w-24 h-48 bg-white/20 rotate-12 transform group-hover:scale-110 transition-transform">
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">WOMEN'S WEAR</h3>
-                </div>
-            </div>
 
-            <!-- Men's Wear -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style=" background-image: url(https://i.pinimg.com/736x/83/94/6a/83946a98a889d929be91eaf9d23ec843.jpg);"
-                    class="aspect-[4/5] bg-contain bg-no-repeat bg-top bg-[#E5D4B3] flex items-center justify-center">
-                    <div class="w-24 h-48 bg-white/20 rotate-12 transform group-hover:scale-110 transition-transform">
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">MEN'S WEAR</h3>
-                </div>
-            </div>
-
-            <!-- Kid's Wear -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style="background-image: url(https://i.pinimg.com/736x/21/19/4d/21194d601d49561c75395ad56dfdb2cf.jpg);"
-                    class="aspect-[4/5] bg-cover bg-center bg-[#B8C6D0] flex items-center justify-center">
-                    <div class="w-24 h-48 bg-white/20 rotate-12 transform group-hover:scale-110 transition-transform">
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">KID'S WEAR</h3>
-                </div>
-            </div>
-
-            <!-- Home Furnishing -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style="background-image: url(https://i.pinimg.com/736x/5b/fd/09/5bfd093752f3f9ccd248291d501d5101.jpg);"
-                    class="aspect-[4/5] bg-cover bg-center bg-[#F5F0EB] flex items-center justify-center">
-                    <div class="w-24 h-48 bg-white/20 rotate-12 transform group-hover:scale-110 transition-transform">
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">HOME FURNISHING</h3>
-                </div>
-            </div>
-
-            <!-- Classical & Traditional -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style="background-image: url(https://i.pinimg.com/736x/d9/af/c5/d9afc5146d50b714fb446a19a861e588.jpg);"
-                    class="aspect-[4/5] bg-contain  bg-center bg-[#8B1818] flex items-center justify-center">
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">CLASSICAL & TRADITIONAL</h3>
-                </div>
-            </div>
-
-            <!-- Matching Cloth Materials -->
-            <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div style="background-image: url(https://i.pinimg.com/736x/2a/fd/7d/2afd7d1aae3fce08a5cae1c89da0b1f3.jpg);"
-                    class="aspect-[4/5] bg-cover bg-center bg-[#D3D3D3] flex items-center justify-center">
-                    <div class="w-24 h-48 bg-white/20 rotate-12 transform group-hover:scale-110 transition-transform">
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 right-0 bg-white p-4">
-                    <h3 class="text-center font-bold">MATCHING CLOTH MATERIALS</h3>
-                </div>
+    <section class="flex overflow-x-auto scrollbar-hide gap-4 p-4 mt-8">
+        <!-- Section 1: cotton sarees -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl" src="images/cotton sharee.jpg"
+                alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Cotton Sarees</h2>
             </div>
         </div>
-    </div>
+
+        <!-- Section 2: fency sarees -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl" src="images/Fancy Sarees.jpg"
+                alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Fancy Sarees</h2>
+            </div>
+        </div>
+
+        <!-- Section 3: Sambalpuri sarees -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/04/66/56/0466566606dcccfc9fdeb69b5ae81d0b.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Sambalpuri Sarees</h2>
+            </div>
+        </div>
+
+        <!-- 	Men’s Wear -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/bb/9b/75/bb9b75d1545a0a96dad8b16e023da571.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Kids Wear</h2>
+            </div>
+        </div>
+
+        <!-- •	Men’s Wear -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/83/94/6a/83946a98a889d929be91eaf9d23ec843.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Men's Wear</h2>
+            </div>
+        </div>
+
+        <!-- Section 4: patto sarees-->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/8f/93/21/8f93218010c633b2c53a21993e4d9893.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Patto Sarees</h2>
+            </div>
+        </div>
+
+        <!-- Section 5: •	Lehenga -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/9e/98/bd/9e98bd94f14f8a65fb0777f0dc08e39f.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Lehenga</h2>
+            </div>
+        </div>
+
+
+        <!-- •	Salwar Suits -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/9d/17/9d/9d179dcca12794f05a3e0253c9fd8231.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Salwar Suits</h2>
+            </div>
+        </div>
+        <!-- •	Kurtis -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/ee/29/ae/ee29aef797ab5c6e1e69c880126eb7a7.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Kurtis</h2>
+            </div>
+        </div>
+        <!-- •	Jeans -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/d6/80/d6/d680d67fc3367313f48617dcd385486c.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Jeans</h2>
+            </div>
+        </div>
+        <!-- Top's -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/75/57/cb/7557cb9071b8ccae88a74d956681133b.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Top's</h2>
+            </div>
+        </div>
+        <!-- •	Sherwani -->
+        <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
+            <img class="w-full h-68 md:h-96 object-cover object-top rounded-t-xl"
+                src="https://i.pinimg.com/736x/5d/b6/8f/5db68f042f72c7ce8d63dc236e2912d7.jpg" alt="Security">
+            <div class="p-4 text-center">
+                <h2 class="text-xl md:text-2xl italic font-serif text-gray-800">Sherwani</h2>
+            </div>
+        </div>
+    </section>
 
     <!-- About Us Section -->
-    <div class="container mx-auto px-4 py-12">
+    <div class="container mx-auto px-1 py-12">
         <div class="bg-white rounded-xl shadow-lg p-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Text Content -->
                 <div class="space-y-6">
                     <h2 class="text-4xl font-bold">About Us</h2>
                     <p class="text-gray-600 leading-relaxed">
-                        Welcome to Sri Chandana Collection, where tradition blends seamlessly with innovation in the
-                        world of fashion textiles.
-                        From a humble beginning, we have evolved into a trusted name in the textile industry, renowned
-                        for our commitment to
-                        quality, sustainability, and contemporary designs.
+                        Sree Chandana Collections, located at the heart of the city on Fire Station Road in Berhampur,
+                        is your go-to destination for a wide variety of clothing. The store offers a stunning collection
+                        of sarees, salwar suits, kurtis, lehengas, kids' wear, men's wear, and much more. Whether you're
+                        looking for traditional attire or trendy outfits, Sree Chandana Collections has something to
+                        suit every occasion and style. With its prime location and diverse range of products, it’s the
+                        perfect place to shop for quality fashion at great prices. Visit today and discover the best in
+                        apparel for the whole family!
                     </p>
-                    <p class="text-gray-600 leading-relaxed">
-                        We offer a diverse range of textiles, including classic cottons, luxurious linens, and
-                        eco-friendly blends.
-                        Whether you're searching for elegant evening wear fabrics, durable everyday materials, or
-                        statement-making textiles,
-                        our collection is designed to meet all your fashion needs.
-                    </p>
+
                     <button class="bg-[#8B1818] text-white px-6 py-3 rounded-lg hover:bg-[#6B1313] transition-colors">
                         Know More
                     </button>
                 </div>
 
                 <!-- Video/Image Placeholder -->
-                <div class="bg-gray-900 rounded-lg aspect-video flex items-center justify-center">
-                    <div class="text-white text-opacity-50">Video Content</div>
+                <div class="bg-gray-900 rounded-lg overflow-hidden aspect-video flex items-center justify-center">
+                    <video class="w-full h-full object-cover" autoplay muted loop src="videos/main.mp4"></video>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-yellow-600 text-white text-center p-6 text-3xl font-bold">
-        KARAGIRI NEWLY LAUNCHED
+    <div class="text-white text-center  text-3xl font-bold">
+        <img class="w-full h-full object-cover"
+            src="https://sriannapurnatextiles.com/wp-content/uploads/2024/06/NL_Desktop_Strip-1536x179.webp" alt="">
     </div>
 
     <section class="text-center my-6">
@@ -157,36 +210,38 @@
     </section>
 
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <div style="background-image: url(https://i.pinimg.com/736x/40/f2/34/40f23448816429ae9cae9381877be11f.jpg);"
-                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+        <div class="flex justify-between gap-6 overflow-x-auto py-4 scrollbar-hide">
+            <!-- Item 1: Banarasi Bridal Saree -->
+            <div class="flex-none w-72 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(images/cotton\ sharee.jpg);"
+                    class="bg-cover bg-top h-64 rounded-t-lg shadow-md">
                 </div>
-                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Banarasi Bridal Saree</h1>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center p-4">Banarasi Bridal Saree</h1>
             </div>
 
-            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <!-- Item 2: Graceful Net Fancy Saree -->
+            <div class="flex-none w-72 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div style="background-image: url(https://i.pinimg.com/736x/38/fd/8e/38fd8eae293cb5c78c4a1e5ac5696820.jpg);"
-                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                    class="bg-cover bg-top h-64 rounded-t-lg shadow-md">
                 </div>
-                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Graceful Net Fancy Saree</h1>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center p-4">Graceful Net Fancy Saree</h1>
             </div>
 
-            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <!-- Item 3: Karishma Cotton Saree -->
+            <div class="flex-none w-72 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div style="background-image: url(https://i.pinimg.com/736x/17/3c/ef/173ceff880b612e44a74acf2529c634f.jpg);"
-                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                    class="bg-cover bg-top h-64 rounded-t-lg shadow-md">
                 </div>
-                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Karishma Cotton Saree</h1>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center p-4">Karishma Cotton Saree</h1>
             </div>
 
-            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <!-- Item 4: Sequinned Art Silk Saree -->
+            <div class="flex-none w-72 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <div style="background-image: url(https://i.pinimg.com/736x/31/cd/81/31cd81259ebb9af18ec594d5000ad77d.jpg);"
-                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                    class="bg-cover bg-top h-64 rounded-t-lg shadow-md">
                 </div>
-                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Sequinned Art Silk Saree</h1>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center p-4">Sequinned Art Silk Saree</h1>
             </div>
-
-
         </div>
     </div>
 
@@ -199,7 +254,7 @@
 
         <div
             class="right bg-white w-full sm:w-[48vw] min-h-[50vh] flex flex-col justify-center px-5 sm:px-9 gap-5 text-center sm:text-left rounded-lg">
-            <h1 class="text-3xl sm:text-4xl font-bold text-indigo-700">Sambalpuri Saree </h1>
+            <h1 class="text-3xl sm:text-4xl font-bold">Sambalpuri Saree </h1>
             <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                 Berhampur Phoda Kumbha in contrasting contemporary borders. Introduced at Berhampur town in the 14th
                 century AD by the Mohuri Kings. The Berhampur phoda Kumbha has a unique pattern of weaving, particularly
@@ -211,58 +266,107 @@
 
     <div
         class="w-full mt-5 min-h-[80vh] flex flex-col sm:flex-row-reverse items-center justify-between pt-10 px-5 sm:px-10 mb-10">
-        <div
-            class="left bg-gradient-to-r from-blue-500 to-indigo-600 w-full sm:w-[45vw] p-5 min-h-[50vh] flex items-center justify-center rounded-lg ">
-            <div class="imgdiv bg-gray-300 w-full h-[50vh] rounded-md shadow-md"></div>
+        <div class="left w-full sm:w-[45vw] p-5 min-h-[50vh] flex items-center justify-center rounded-lg ">
+            <div style="background-image: url(https://imgs.search.brave.com/H_XBtiL7u_PXvSp1BHhPnknMX6gZ5F0CIKubfBsEHD0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cGFyaXNlcmEuY29t/L2Nkbi9zaG9wL3By/b2R1Y3RzL0RTQ18w/MTYyLTFfZGIwNmMw/ZjEtNmY1NS00OTMz/LTgzNjQtMzNjZDBi/YWU2MDlhLmpwZz92/PTE2Njk5Njk2NTE);"
+                class="imgdiv bg-cover bg-center bg-gray-300 w-full h-[50vh] rounded-md shadow-md"></div>
         </div>
 
         <div
             class="right bg-white w-full sm:w-[48vw] min-h-[50vh] flex  flex-col justify-center px-5 sm:px-9 gap-5 text-center sm:text-left rounded-lg ">
-            <h1 class="text-3xl sm:text-4xl font-bold text-indigo-700">Berhampuri Silk Patta</h1>
+            <h1 class="text-3xl sm:text-4xl font-bold">Berhampuri Silk Patta</h1>
             <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
-                A Sambalpuri saree is a traditional handwoven saree from the state of Odisha, India, known for its
-                unique patterns and intricate craftsmanship. These sarees are made using a tie-dye technique called
-                “Bandha,” which is similar to the Ikat weaving style. The patterns are created on the yarn before
-                weaving, which results in beautiful and precise designs once the fabric is woven.Sambalpuri sarees often
-                feature motifs inspired by nature, such as flowers, wheels, and conch shells, as well as traditional
-                geometric patterns. They are typically made from cotton or silk, making them suitable for both everyday
-                wear and special occasions. The rich colors and fine craftsmanship make these sarees highly valued, both
-                in India and internationally.
+                A Sambalpuri saree is a traditional handwoven saree from Odisha, India, renowned for its unique patterns
+                and exquisite craftsmanship. Made using the “Bandha” tie-dye technique, similar to Ikat, the designs are
+                dyed onto the yarn before weaving, resulting in intricate and precise patterns. These sarees often
+                showcase nature-inspired motifs like flowers, wheels, and conch shells, along with geometric designs.
+                Crafted from cotton or silk, they are versatile for both casual and formal wear. Known for their vibrant
+                colors and fine artistry, Sambalpuri sarees are cherished both in India and globally.
             </p>
         </div>
     </div>
-
+    <!-- men's wear -->
     <div class="max-w-6xl mx-auto p-4">
         <!-- Banner Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="h-48 bg-red-500 flex items-center justify-center text-white text-xl font-bold">
-                Banner Left
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+            <div class="sm:h-96 h-40   flex items-center justify-center text-white text-xl font-bold">
+                <img class="w-full h-full object-contain sm:object-cover  object-top "
+                    src="https://i.pinimg.com/736x/de/f6/7a/def67a51cdbb2723cd7b07e4dc30fc0e.jpg" alt="">
             </div>
-            <div class="h-48 bg-yellow-500 flex items-center justify-center text-white text-xl font-bold">
-                Banner Right
-            </div>
+
         </div>
 
         <!-- Section Title -->
-        <h2 class="text-2xl font-bold text-center my-6">Trendy Dress Materials</h2>
+        <h2 class="text-4xl font-bold text-center my-6">Men's Wear</h2>
 
         <!-- Card Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-pink-500 p-4 rounded-lg shadow-md text-white text-center h-56 flex flex-col justify-center">
-                <h3 class="font-bold">Dress Material</h3>
-                <p>Leheriya Printed Mirror Work</p>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/e3/fc/43/e3fc438369f1495254d4f7319a4603b1.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Men Cotton Striped Kurta Pyjama Set
+                </h1>
             </div>
-            <div class="bg-blue-500 p-4 rounded-lg shadow-md text-white text-center h-56 flex flex-col justify-center">
-                <h3 class="font-bold">Dress Material</h3>
-                <p>Bandhani Embroidered Unstitched</p>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/93/d5/c4/93d5c498f9800930a8012a4a53bdbaec.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Casual Wear Denim Jeans</h1>
             </div>
-            <div class="bg-red-500 p-4 rounded-lg shadow-md text-white text-center h-56 flex flex-col justify-center">
-                <h3 class="font-bold">Dress Material</h3>
-                <p>Floral Woven Design Zari</p>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/49/11/8f/49118f7e249356798cfe374675308d57.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Men's Indo-Western Sherwani</h1>
             </div>
-            <div class="bg-green-500 p-4 rounded-lg shadow-md text-white text-center h-56 flex flex-col justify-center">
-                <h3 class="font-bold">Dress Material</h3>
-                <p>Zari Sequinned Unstitched</p>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/fe/12/0f/fe120f5ac9903a7af307173785b74410.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Casual Outfit</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section Title -->
+    <h2 class="text-4xl font-bold text-center my-6">Kid's Wear</h2>
+    <!-- kids wear -->
+    <div class="max-w-6xl mx-auto p-4">
+        <!-- Banner Section -->
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+            <div class="sm:h-96 h-40   flex items-center justify-center text-white text-xl font-bold">
+                <img class="w-full h-full object-contain sm:object-cover  object-center "
+                    src="https://i.pinimg.com/736x/79/0c/3c/790c3cf681d555d5759f410a578b7399.jpg" alt="">
+            </div>
+
+        </div>
+
+        <!-- Card Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/46/0c/44/460c447333060e242073bc50cd2a5a44.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">kids for stylish sharara set</h1>
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/85/91/3f/85913f12f0a77c4fc79ff5419d320354.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Top Jeans</h1>
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://i.pinimg.com/736x/56/34/50/5634507d9b3bb196f136e039f839ab65.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-lg shadow-md">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Girls Party(Festive) </h1>
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div style="background-image: url(https://5.imimg.com/data5/KW/SF/YG/SELLER-33859177/girls-denim-jumpsuit-1000x1000.jpg);"
+                    class="bg-cover bg-top h-64 text-white text-lg font-bold rounded-xl ">
+                </div>
+                <h1 class="text-xl font-semibold mt-3 text-gray-800 text-center">Jumpsuit</h1>
             </div>
         </div>
     </div>
@@ -271,10 +375,11 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                  <!-- footer part1 -->
-                  <div>
+                <!-- footer part1 -->
+                <div>
                     <img class="w-32" src="images/logo.png" alt="">
-                    <h1  class="text-black text-md w-[80%]">Welcome to Sri Chandana Collection, where innovation meets tradition in the world of fashion textiles.</h1>
+                    <h1 class="text-black text-md w-[80%]">Welcome to Sri Chandana Collection, where innovation meets
+                        tradition in the world of fashion textiles.</h1>
                 </div>
 
                 <!-- Address -->

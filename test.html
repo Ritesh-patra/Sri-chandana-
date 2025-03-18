@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Sender</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <form class="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Send an Email</h2>
+
+        <label class="block text-gray-700 font-semibold mb-1">Full Name:</label>
+        <input type="text" id="fullname" class="w-full p-2 border border-gray-300 rounded mb-3" required>
+
+        <label class="block text-gray-700 font-semibold mb-1">Phone Number:</label>
+        <input type="tel" id="phone" class="w-full p-2 border border-gray-300 rounded mb-3" required>
+
+        <label class="block text-gray-700 font-semibold mb-1">Email To:</label>
+        <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded mb-3" required>
+
+        <label class="block text-gray-700 font-semibold mb-1">Subject:</label>
+        <input type="text" id="subject" class="w-full p-2 border border-gray-300 rounded mb-3" required>
+
+        <div class="flex items-center mb-3">
+            <input type="checkbox" id="checkbox" class="mr-2">
+            <label for="checkbox" class="text-gray-700">Select this option</label>
+        </div>
+
+        <label class="block text-gray-700 font-semibold mb-1">Message:</label>
+        <textarea id="message" class="w-full p-2 border border-gray-300 rounded mb-3 h-32" required></textarea>
+
+        <button type="button" id="submit"
+            class="w-full bg-blue-500 text-white font-bold p-2 rounded hover:bg-blue-600 transition">Send</button>
+    </form>
+
+    <script>
+        document.getElementById("submit").onclick = () => {
+            const fullName = document.getElementById("fullname").value;
+            const phone = document.getElementById("phone").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+            const isChecked = document.getElementById("checkbox").checked;
+
+            if (!fullName || !phone || !email || !subject || !message) {
+                alert("All fields are required!");
+                return;
+            }
+
+            fetch('https://movers-san-francisco.com/email_sender.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'email_message=' + JSON.stringify({
+                    'fullname': fullName,
+                    'phone': phone,
+                    'mail_to': email,
+                    'mail_subject': subject,
+                    'mail_message': message,
+                    'checkbox': isChecked
+                })
+            }).then(response => response.json()).then(data => {
+                if (data.result === 'success') {
+                    alert(`Email was successfully sent to ${data.mail_to}`);
+                } else {
+                    alert('Error sending email!');
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>
