@@ -21,6 +21,11 @@
         scrollbar-width: none;
         /* Firefox ke liye */
     }
+    @media (max-width: 768px) {
+        header {
+            height: 70vh; /* Adjust as needed */
+        }
+    }
 </style>
 
 <body>
@@ -29,35 +34,23 @@
             <div class="flex items-center">
                 <img class="w-28" src="images/logo.png" alt="">
             </div>
-            <div class="hidden md:flex sm:flex-initial items-center justify-between">
-                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Home</a>
-                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">About</a>
-                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Services</a>
-                <a href="#" class="ml-4 text-sm font-medium text-black hover:text-gray-400">Contact</a>
-            </div>
-
-            <div class="flex items-center">
-                <button
-                    class="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
-                    Contact Us
-                </button>
-            </div>
+         
         </div>
     </nav>
-    <header style="background-image: url(images/hero.jpg);"
-    class="w-full flex flex-col md:flex-row items-center relative justify-between h-screen bg-center bg-cover">
+    <header style="background-image: url(images/hero.jpg); background-position: top; background-repeat: no-repeat; background-size: cover;"
+    class="w-full flex flex-col md:flex-row items-center relative justify-between h-screen md:h-screen  bg-cover">
     <!-- Left Section (Empty, can be used for spacing or additional design) -->
     <div class="left w-full md:w-1/2"></div>
 
     <!-- Right Section (Content) -->
-    <div class="right w-full md:w-1/2 h-full flex flex-col justify-center items-start p-6 md:p-10 text-white">
+    <div class="right w-full md:w-1/2 h-full flex flex-col justify-end sm:justify-center items-start p-6 md:p-10 text-white">
         <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to <br> Shree Chandana Collection</h1>
         <p class="text-base md:text-lg mb-4 md:mb-6">Discover the Elegance of Handcrafted Sambalpuri Sarees</p>
         <p class="text-sm md:text-base mb-6 md:mb-8">Experience the rich heritage of Odisha with our exclusive collection of
             traditional and contemporary designs. Perfect for every occasion, our sarees are woven with love and
             precision.</p>
-        <a href="#collection"
-            class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
+        <a href="#page3"
+            class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
             Explore Collection
         </a>
     </div>
@@ -67,6 +60,7 @@
 
     <!-- Categories Grid -->
 
+    <h1 class="text-center sm:text-5xl text-4xl leading-none font-bold mt-9">We Deal's With</h1>
     <section class="flex overflow-x-auto scrollbar-hide gap-4 p-4 mt-8">
         <!-- Section 1: cotton sarees -->
         <div class="flex-none w-64 h-80 md:w-80 md:h-[33vw] bg-white shadow-lg rounded-xl overflow-hidden">
@@ -213,7 +207,7 @@
         <h2 class="text-2xl font-bold">Explore Sarees</h2>
     </section>
 
-    <div class="container mx-auto px-4">
+    <div id="page3" class="container mx-auto px-4">
         <div class="flex justify-between gap-6 overflow-x-auto py-4 scrollbar-hide">
             <!-- Item 1: Banarasi Bridal Saree -->
             <div class="flex-none w-72 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
@@ -382,24 +376,22 @@
                 <!-- footer part1 -->
                 <div>
                     <img class="w-32" src="images/logo.png" alt="">
-                    <h1 class="text-black text-md w-[80%]">Welcome to Sri Chandana Collection, where innovation meets
+                    <h1 class="text-black text-md w-[80%]">Welcome to Sree Chandana Collection, where innovation meets
                         tradition in the world of fashion textiles.</h1>
                 </div>
 
                 <!-- Address -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">ADDRESS</h3>
-                    <p class="text-black">Hanuman Bazar, Brahmapur, Odisha</p>
-                    <p class="text-black">760002</p>
-                    <p class="text-black">0680-2250026</p>
-                    <p class="text-black">9937750026</p>
-                    <p class="text-black">sat.bam@hotmail.com</p>
+                    <p class="text-black">Fire Station Road, Near Annapurna Market, BERHAMPUR, 760002</p>
+                    <p class="text-black"></p>
+                    <p class="text-black">+91 89843 87990</p>
                 </div>
 
                 <!-- Copyright -->
                 <div class="md:text-righ w-full h-full flex items-end">
                     <div class="p-4 rounded-lg">
-                        <p class="text-black">Copyright © 2024 Sri Annapurna Textiles – All Rights Reserved.</p>
+                        <p class="text-black">Copyright © 2025 Sree Chandana Collection - All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -407,7 +399,7 @@
     </footer>
 
     <!-- WhatsApp Contact Button -->
-    <a href="https://wa.me/your-number"
+    <a href="https://wa.me/+918984387990"
         class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
         <i class="ri-whatsapp-line text-2xl"></i>
     </a>
