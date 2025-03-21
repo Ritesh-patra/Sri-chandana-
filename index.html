@@ -21,11 +21,29 @@
         scrollbar-width: none;
         /* Firefox ke liye */
     }
+
     @media (max-width: 768px) {
         header {
-            height: 70vh; /* Adjust as needed */
+            height: 70vh;
+            /* Adjust as needed */
         }
     }
+
+     /* Default background image (for small screens) */
+     header {
+                background-image: url('https://i.pinimg.com/736x/b6/f6/c9/b6f6c91b7451d82b63940a19fb082c7f.jpg');
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* Background image for large screens */
+            @media (min-width: 768px) {
+                header {
+                    background-image: url('images/hero.jpg');
+                    /* Replace with your large screen image URL */
+                }
+            }
 </style>
 
 <body>
@@ -34,27 +52,31 @@
             <div class="flex items-center">
                 <img class="w-28" src="images/logo.png" alt="">
             </div>
-         
+
         </div>
     </nav>
-    <header style="background-image: url(images/hero.jpg); background-position: top; background-repeat: no-repeat; background-size: cover;"
-    class="w-full flex flex-col md:flex-row items-center relative justify-between h-screen md:h-screen  bg-cover">
-    <!-- Left Section (Empty, can be used for spacing or additional design) -->
-    <div class="left w-full md:w-1/2"></div>
+    <header
+        class="w-full flex flex-col md:flex-row items-center relative justify-between h-screen md:h-screen bg-cover">
+        <!-- Left Section (Empty, can be used for spacing or additional design) -->
+        <div class="left w-full md:w-1/2"></div>
 
-    <!-- Right Section (Content) -->
-    <div class="right w-full md:w-1/2 h-full flex flex-col justify-end sm:justify-center items-start p-6 md:p-10 text-white">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to <br> Shree Chandana Collection</h1>
-        <p class="text-base md:text-lg mb-4 md:mb-6">Discover the Elegance of Handcrafted Sambalpuri Sarees</p>
-        <p class="text-sm md:text-base mb-6 md:mb-8">Experience the rich heritage of Odisha with our exclusive collection of
-            traditional and contemporary designs. Perfect for every occasion, our sarees are woven with love and
-            precision.</p>
-        <a href="#page3"
-            class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
-            Explore Collection
-        </a>
-    </div>
-</header>
+        <!-- Right Section (Content) -->
+        <div
+            class="right w-full md:w-1/2 h-full flex flex-col justify-end sm:justify-center items-start p-6 md:p-10 text-white">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Welcome to <br> Shree Chandana Collection</h1>
+            <p class="text-base md:text-lg mb-4 md:mb-6">Explore the Timeless Beauty of Handcrafted Fabrics & Ethnic Wear</p>
+            <p class="text-sm md:text-base mb-6 md:mb-8">Experience the rich heritage of Odisha with our exclusive
+                collection of
+                traditional and contemporary designs. Perfect for every occasion, our sarees are woven with love and
+                precision.</p>
+            <a href="#page3"
+                class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
+                Explore Collection
+            </a>
+        </div>
+    </header>
+
+
 
 
 
